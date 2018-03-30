@@ -1,14 +1,14 @@
+var uuddProgress = Array();
 function uudd(uuddDoneCode) {
     if (typeof(uuddDoneCode) !== "function") {
-        Console.log("The parameter is not a function. :(");
-        uuddDoneCode = function() {}
+        throw "The argument is no function :(";
+        uuddDoneCode = function() {};
     }
     function uuddReset() {
         uuddProgress = Array();
     }
-
     function uuddCheck(e) {
-        uuddProgress = Array();
+        
         e = e || window.event;
         if (typeof(uuddProgress) === "undefined") uuddReset();
         if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "a" || e.key === "b") {
