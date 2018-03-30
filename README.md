@@ -6,6 +6,8 @@ Well, this JS libary is exactly that!
 
 # Examples
 
+See them in action here: https://webwevers.github.io/UpUpDownDown/index.html
+
 Display a alert message
 
 ```javascript
