@@ -1,5 +1,7 @@
 # UpUpDownDown
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e11f497ef8824cc793e53a235be2efa2)](https://www.codacy.com/app/noahliedfilm/UpUpDownDown?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=WebWevers/UpUpDownDown&amp;utm_campaign=Badge_Grade)
+
 Know the cheat in old games that when you pressed the keys UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A something would happen?
 
 Well, this JS libary is exactly that!
