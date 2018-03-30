@@ -1,6 +1,6 @@
 # UpUpDownDown
 
-Know the cheat in old games when you pressed the keys UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A something would happen?
+Know the cheat in old games that when you pressed the keys UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, B, A something would happen?
 
 Well, this JS libary is exactly that!
 
