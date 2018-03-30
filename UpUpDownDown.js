@@ -1,3 +1,9 @@
+//
+// UpUpDownDown v1.0
+// 
+// https://webwevers.nl
+//
+
 var uuddProgress = Array();
 function uudd(uuddDoneCode) {
     if (typeof(uuddDoneCode) !== "function") {
