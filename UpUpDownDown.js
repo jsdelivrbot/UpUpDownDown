@@ -1,82 +1,79 @@
-function uudd(uudd_done_code) {
-    if (typeof(uudd_done_code) !== 'function') {
-        console.log('The parameter is not a function. :(');
-        uudd_done_code = function() {}
-    };
-    document.onkeydown = uudd_check;
+function uudd(uuddDoneCode) {
+    if (typeof(uuddDoneCode) !== "function") {
+        console.log("The parameter is not a function. :(");
+        uuddDoneCode = function() {}
+    }
+    function uuddReset() {
+        uuddProgress = Array();
+    }
 
-    function uudd_check(e) {
+    function uuddCheck(e) {
         e = e || window.event;
-        if (typeof(uudd_progress) == 'undefined') uudd_progress = Array();
-        if (e.key == 'ArrowUp' || e.key == 'ArrowDown' || e.key == 'ArrowDown' || e.key == 'ArrowLeft' || e.key == 'ArrowRight' || e.key == 'a' || e.key == 'b') {
-            if (uudd_progress.length == 0) {
-                if (e.key == 'ArrowUp') {
-                    uudd_progress = Array('UP');
+        if (typeof(uuddProgress) == "undefined") uuddReset();
+        if (e.key == "ArrowUp" || e.key == "ArrowDown" || e.key == "ArrowDown" || e.key == "ArrowLeft" || e.key == "ArrowRight" || e.key == "a" || e.key == "b") {
+            if (uuddProgress.length == 0) {
+                if (e.key == "ArrowUp") {
+                    uuddProgress = Array("UP");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
-            } else if (uudd_progress.length == 1) {
-                if (e.key == 'ArrowUp') {
-                    uudd_progress = Array('UP', 'UP');
+            } else if (uuddProgress.length == 1) {
+                if (e.key == "ArrowUp") {
+                    uuddProgress = Array("UP", "UP");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
-            } else if (uudd_progress.length == 2) {
-                if (e.key == 'ArrowDown') {
-                    uudd_progress = Array('UP', 'UP', 'DOWN');
+            } else if (uuddProgress.length == 2) {
+                if (e.key == "ArrowDown") {
+                    uuddProgress = Array("UP", "UP", "DOWN");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
-            } else if (uudd_progress.length == 3) {
-                if (e.key == 'ArrowDown') {
-                    uudd_progress = Array('UP', 'UP', 'DOWN', 'DOWN');
+            } else if (uuddProgress.length == 3) {
+                if (e.key == "ArrowDown") {
+                    uuddProgress = Array("UP", "UP", "DOWN", "DOWN");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
-            } else if (uudd_progress.length == 4) {
-                if (e.key == 'ArrowLeft') {
-                    uudd_progress = Array('UP', 'UP', 'DOWN', 'DOWN', 'LEFT');
+            } else if (uuddProgress.length == 4) {
+                if (e.key == "ArrowLeft") {
+                    uuddProgress = Array("UP", "UP", "DOWN", "DOWN", "LEFT");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
-            } else if (uudd_progress.length == 5) {
-                if (e.key == 'ArrowRight') {
-                    uudd_progress = Array('UP', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT');
+            } else if (uuddProgress.length == 5) {
+                if (e.key == "ArrowRight") {
+                    uuddProgress = Array("UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
-            } else if (uudd_progress.length == 6) {
-                if (e.key == 'ArrowLeft') {
-                    uudd_progress = Array('UP', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT', 'LEFT');
+            } else if (uuddProgress.length == 6) {
+                if (e.key == "ArrowLeft") {
+                    uuddProgress = Array("UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
-            } else if (uudd_progress.length == 7) {
-                if (e.key == 'ArrowRight') {
-                    uudd_progress = Array('UP', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT', 'LEFT', 'RIGHT');
+            } else if (uuddProgress.length == 7) {
+                if (e.key == "ArrowRight") {
+                    uuddProgress = Array("UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
-            } else if (uudd_progress.length == 8) {
-                if (e.key == 'b') {
-                    uudd_progress = Array('UP', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT', 'LEFT', 'RIGHT', 'B');
+            } else if (uuddProgress.length == 8) {
+                if (e.key == "b") {
+                    uuddProgress = Array("UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "B");
                 } else {
-                    uudd_reset();
+                    uuddReset();
                 }
             } else if (uudd_progress.length == 9) {
-                if (e.key == 'a') {
-                    uudd_reset();
-                    uudd_done_code();
-                } else {
-                    uudd_reset();
+                uuddReset();
+                if (e.key == "a") {
+                    uuddDoneCode();
                 }
             }
         } else {
-            uudd_reset();
+            uuddReset();
         }
     }
-
-    function uudd_reset() {
-        uudd_progress = Array();
-    }
+    document.onkeydown = uuddCheck;
 }
