@@ -45,11 +45,11 @@ In order to get started you can do one of these two things:
 
 Just add this line of code to your document for the minified code:
 ```html
-<script src="https://cdn.rawgit.com/WebWevers/UpUpDownDown/3b7308b0/UpUpDownDown.min.js"></script>
+<script src="https://cdn.rawgit.com/WebWevers/UpUpDownDown/651db237/UpUpDownDown.min.js"></script>
 ```
 Or, maybe you want the non-minified version:
 ```html
-<script src="https://cdn.rawgit.com/WebWevers/UpUpDownDown/3b7308b0/UpUpDownDown.js"></script>
+<script src="https://cdn.rawgit.com/WebWevers/UpUpDownDown/651db237/UpUpDownDown.js"></script>
 ```
 
 ## Clone the repository
