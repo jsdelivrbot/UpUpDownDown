@@ -8,7 +8,6 @@ function uudd(uuddDoneCode) {
         uuddProgress = Array();
     }
     function uuddCheck(e) {
-        
         e = e || window.event;
         if (typeof(uuddProgress) === "undefined"){ uuddReset(); }
         if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "a" || e.key === "b") {
@@ -66,7 +65,7 @@ function uudd(uuddDoneCode) {
                 } else {
                     uuddReset();
                 }
-            } else if (uuddProgress.length === 9) {
+            } else {
                 uuddReset();
                 if (e.key === "a") {
                     uuddDoneCode();
