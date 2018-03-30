@@ -1,8 +1,8 @@
 var uuddProgress = Array();
 function uudd(uuddDoneCode) {
     if (typeof(uuddDoneCode) !== "function") {
-        throw "The argument is no function :(";
         uuddDoneCode = function() {};
+        throw "The argument is no function :(";
     }
     function uuddReset() {
         uuddProgress = Array();
@@ -10,7 +10,7 @@ function uudd(uuddDoneCode) {
     function uuddCheck(e) {
         
         e = e || window.event;
-        if (typeof(uuddProgress) === "undefined") uuddReset();
+        if (typeof(uuddProgress) === "undefined"){ uuddReset(); }
         if (e.key === "ArrowUp" || e.key === "ArrowDown" || e.key === "ArrowDown" || e.key === "ArrowLeft" || e.key === "ArrowRight" || e.key === "a" || e.key === "b") {
             if (uuddProgress.length === 0) {
                 if (e.key === "ArrowUp") {
@@ -66,7 +66,7 @@ function uudd(uuddDoneCode) {
                 } else {
                     uuddReset();
                 }
-            } else if (uudd_progress.length === 9) {
+            } else if (uuddProgress.length === 9) {
                 uuddReset();
                 if (e.key === "a") {
                     uuddDoneCode();
